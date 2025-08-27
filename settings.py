@@ -4,12 +4,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 ...
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "jonathan-hans41-football-news.pbp.cs.ui.ac.id"]
 ...
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 # Database configuration
 if PRODUCTION:
-    # Production: gunakan PostgreSQL dengan kredensial dari environment variables
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
