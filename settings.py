@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['jonathan-hans41-footballnews.pbp.cs.ui.ac.id', '127.0.0.1', 'l
 
 # Application definition
 
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
