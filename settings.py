@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "jonathan-hans41-footballnews.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = ['jonathan-hans41-footballnews.pbp.cs.ui.ac.id', 'localhost', '127.0.0.1']
 
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 # Database configuration
