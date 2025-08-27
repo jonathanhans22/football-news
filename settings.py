@@ -7,6 +7,7 @@ ALLOWED_HOSTS = ['jonathan-hans41-footballnews.pbp.cs.ui.ac.id', 'localhost', '1
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 # Database configuration
 if PRODUCTION:
+    
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
