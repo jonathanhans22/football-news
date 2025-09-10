@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-@*ak5i&k7_#t#fx_z@5gh!r)rujhkkf1sg8e5x1xr$sq#ri-yd
 
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['jonathan-hans41-footballnews1.pbp.cs.ui.ac.id', '127.0.0.1', 'localhost']
@@ -38,6 +38,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://jonathan-hans41-footballnews1.pbp.cs.ui.ac.id/"
 ]
 # Application definition
+
 
 
 
