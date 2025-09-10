@@ -34,7 +34,9 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['jonathan-hans41-footballnews1.pbp.cs.ui.ac.id', '127.0.0.1', 'localhost']
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://jonathan-hans41-footballnews1.pbp.cs.ui.ac.id/"
+]
 # Application definition
 
 
@@ -64,7 +66,7 @@ ROOT_URLCONF = 'football_news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], # Tambahkan konten baris ini
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
