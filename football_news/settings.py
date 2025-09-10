@@ -39,6 +39,7 @@ CSRF_TRUSTED_ORIGINS = ['https://jonathan-hans41-footballnews1.pbp.cs.ui.ac.id']
 
 
 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
