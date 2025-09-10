@@ -17,14 +17,20 @@ def show_main(request):
     return render(request, "main.html", context)
 
 def create_news(request):
-    form = NewsForm(request.POST or None)
-
-    if form.is_valid() and request.method == "POST":
-        form.save()
-        return redirect('main:show_main')
+    # Logika yang diperbaiki untuk menangani GET dan POST
+    if request.method == 'POST':
+        # Saat request adalah POST, proses data form dan file
+        form = NewsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('main:show_main')
+    else:
+        # Saat request adalah GET, buat form kosong
+        form = NewsForm()
 
     context = {'form': form}
     return render(request, "create_news.html", context)
+
 
 def show_news(request, id):
     news = get_object_or_404(News, pk=id)
